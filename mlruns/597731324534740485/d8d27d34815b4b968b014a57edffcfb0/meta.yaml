@@ -1,0 +1,15 @@
+artifact_uri: file:////mnt/custom-file-systems/efs/fs-090d41204a06429fd_fsap-0c5c0de8e6b7e5fbc/rul/machine-learning/supervised-learning/example/mlruns/597731324534740485/d8d27d34815b4b968b014a57edffcfb0/artifacts
+end_time: 1757010201627
+entry_point_name: ''
+experiment_id: '597731324534740485'
+lifecycle_stage: active
+run_id: d8d27d34815b4b968b014a57edffcfb0
+run_name: placid-duck-80
+run_uuid: d8d27d34815b4b968b014a57edffcfb0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1757010136595
+status: 3
+tags: []
+user_id: sagemaker-user

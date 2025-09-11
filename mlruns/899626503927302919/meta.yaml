@@ -1,0 +1,6 @@
+artifact_location: file:////mnt/custom-file-systems/efs/fs-090d41204a06429fd_fsap-0c5c0de8e6b7e5fbc/rul/machine-learning/supervised-learning/example/mlruns/899626503927302919
+creation_time: 1757009969886
+experiment_id: '899626503927302919'
+last_update_time: 1757009969886
+lifecycle_stage: active
+name: .

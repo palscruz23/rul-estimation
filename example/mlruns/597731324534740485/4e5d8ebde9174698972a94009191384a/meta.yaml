@@ -1,0 +1,15 @@
+artifact_uri: file:////mnt/custom-file-systems/efs/fs-090d41204a06429fd_fsap-0c5c0de8e6b7e5fbc/rul/machine-learning/supervised-learning/example/mlruns/597731324534740485/4e5d8ebde9174698972a94009191384a/artifacts
+end_time: 1757010136440
+entry_point_name: ''
+experiment_id: '597731324534740485'
+lifecycle_stage: active
+run_id: 4e5d8ebde9174698972a94009191384a
+run_name: resilient-frog-588
+run_uuid: 4e5d8ebde9174698972a94009191384a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1757010091516
+status: 3
+tags: []
+user_id: sagemaker-user

@@ -1,0 +1,15 @@
+artifact_uri: file:////mnt/custom-file-systems/efs/fs-090d41204a06429fd_fsap-0c5c0de8e6b7e5fbc/rul/machine-learning/supervised-learning/example/mlruns/597731324534740485/9180c76ae892403ea1d8a25fdd02adc7/artifacts
+end_time: 1757011018340
+entry_point_name: ''
+experiment_id: '597731324534740485'
+lifecycle_stage: active
+run_id: 9180c76ae892403ea1d8a25fdd02adc7
+run_name: welcoming-crab-114
+run_uuid: 9180c76ae892403ea1d8a25fdd02adc7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1757011004579
+status: 3
+tags: []
+user_id: sagemaker-user

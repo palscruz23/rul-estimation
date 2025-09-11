@@ -1,0 +1,15 @@
+artifact_uri: file:////mnt/custom-file-systems/efs/fs-090d41204a06429fd_fsap-0c5c0de8e6b7e5fbc/rul/machine-learning/supervised-learning/example/mlruns/597731324534740485/6c973571171a49dfa7f809da86942f6f/artifacts
+end_time: 1757010580668
+entry_point_name: ''
+experiment_id: '597731324534740485'
+lifecycle_stage: active
+run_id: 6c973571171a49dfa7f809da86942f6f
+run_name: rebellious-bear-898
+run_uuid: 6c973571171a49dfa7f809da86942f6f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1757010565440
+status: 3
+tags: []
+user_id: sagemaker-user
