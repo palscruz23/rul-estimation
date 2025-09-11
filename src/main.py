@@ -47,7 +47,7 @@ def main():
     print(f"Total val engines: {len(val_units)}")
     print(f"Total test engines: {len(test_units)}")
 
-    # Split data set into training and test sets
+    # Split data set into training and validation sets
     # Apply random seed to allow repetition of output
     train_set = train[train.index.isin(train_units)].copy()
     val_set   = train[train.index.isin(val_units)].copy()

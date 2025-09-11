@@ -1,67 +1,80 @@
-# Machine Learning Projects
+# Remaining Useful Life Prediction of Turbofan Engines
 
-Welcome to my collection of machine learning projects! This repository showcases various machine learning models and algorithms implemented in Python, utilizing libraries such as scikit-learn, pandas, and NumPy. The projects span across different domains, including supervised learning, classification, regression, and clustering.
+This repository contains a machine learning project aimed at predicting the Remaining Useful Life (RUL) of turbofan engines using the **PHM08 Prognostics Data Challenge Dataset** provided by NASA. Accurate RUL prediction can enable proactive maintenance, reduce operational costs, and prevent unexpected failures.
 
-## 💾 Repository Structure
+## 📊 Dataset Overview
 
-- `supervised-learning/`: Contains implementations of supervised learning algorithms.
-- `.idea/`: Project-specific settings for JetBrains IDEs (e.g., PyCharm).
-- `LICENSE`: The repository's licensing information.
+The PHM08 dataset includes:
 
-## 🚀 Getting Started
+- **218 engine units**: Each representing a unique turbofan engine.
+- **21 sensor measurements**: Including fan speed, pressure, temperature, and vibration parameters.
+- **Degradation trajectories**: Each engine's data spans from normal operation to failure.
+- **Training and test sets**: Provided for model development and evaluation.
 
-To get started with the projects in this repository:
+More details: [PHM08 Challenge Data Set](https://data.nasa.gov/dataset/phm-2008-challenge)
+
+## 🚀 To get started with RUL predicton project:
 
 1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/palscruz23/machine-learning.git
-   cd machine-learning
+   ```
+   git clone https://github.com/palscruz23/rul-prediction.git
+   cd rul-prediction
    ```
 
-2. Create a virtual environment:
+2. Install dependencies
 
-   ```bash
-   python -m venv venv
    ```
-
-3. Activate the virtual environment:
-
-   - On Windows:
-
-     ```bash
-     .\venv\Scripts\activate
-     ```
-
-   - On macOS/Linux:
-
-     ```bash
-     source venv/bin/activate
-     ```
-
-4. Install the required dependencies:
-
-   ```bash
-   cd .\supervised-learning\
    pip install -r requirements.txt
    ```
 
+3. Run the RUL prediction script
+    ```
+   python src\main.py 
+   ```
+
 ## 📚 Projects Overview
+### <i>Remaining Useful Life Prediction using machine learning techniques</i>
+ - Data Exploration
+   - Load training and test data
+   - Utilise unsupervised learning (K-means) to get operational parameter clusters
+ - Data Processing
+   - Split data set into training and validation sets
+   - Apply Standard Scaler to normalise different sensor measurements
+ - Remaining Useful Life Prediction
+   - Construct Asset Health Indicator
+   - Perform Linear Regression on each sensor to get trendability
+   - Perform sensor fusion to develop health indicator
+   - Develop Residual-similarity model using Degree-2 polynomial fit
+   - Plot health indicator of validation enginer from 5% to 100% operating life
+- Notebook: 
+   ```
+   notebooks/Engine Remaining Useful Life using ML.ipynb
+   ```
 
-### Supervised Learning
+ Methodology inspired by MATLAB Similarity-Based Remaining Useful Life Estimation (https://au.mathworks.com/help/predmaint/ug/similarity-based-remaining-useful-life-estimation.html)
 
-Explore various supervised learning algorithms, including:
+#### 📉 RUL Prediction using ML Demo
 
-- **K-Nearest Neighbors (KNN)**: Predict values or classify outcomes based on nearest neighbors.
-- **Decision Trees**: Model decisions based on feature values.
-- **Random Forests**: Ensemble method for classification and regression.
+ ![RUL Prediction Demo](src/figures/RUL.gif)
 
-Each algorithm is implemented with example datasets.
-
-### Supervised Learning Example (on-ongoing)
-
-- Remaining Useful Life Prediction using supervised learning and deep learning techniques.
-- Dataset: https://data.nasa.gov/dataset/phm-2008-challenge
+ ### <i>Remaining Useful Life Prediction using deep learning techniques</i> (Under construction)
+ - Data Processing
+   - Load training and test data
+   - Split data set into training and validation sets
+   - Create PHM08RULDataset dataset class
+ - Remaining Useful Life Prediction
+   - Initiate ML flow experiment
+   - Create model classes for RNN, LSTM, Seq2Seq and Informer
+   - Prepare training and validation loops
+   - Perform grid search for hyperparameter tuning
+   - Select best model
+   - Perform bias vs variance analysis
+   - Perform prediction on test data.
+  - Notebook: 
+      ```
+      notebooks/Engine Remaining Useful Life using DL.ipynb
+      ```
 
 ## 📜 License
 

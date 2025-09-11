@@ -53,7 +53,7 @@ def normalized_sensor(df, unique_clusters, cluster_mean, cluster_std):
 # Where to save the figures
 PROJECT_ROOT_DIR = "."
 
-IMAGES_PATH = os.path.join(PROJECT_ROOT_DIR, "figures/")
+IMAGES_PATH = os.path.join(PROJECT_ROOT_DIR, "src/figures/")
 os.makedirs(IMAGES_PATH, exist_ok=True)
 
 def save_fig(fig_id, tight_layout=False, fig_extension="png", resolution=300):
