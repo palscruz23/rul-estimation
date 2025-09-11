@@ -1,9 +1,3 @@
-pandas
-matplotlib
-scikit-learn
-numpy
-ucimlrepo
-
 # Core
 numpy>=1.23
 pandas>=2.0
@@ -27,3 +21,7 @@ ipykernel>=6.25
 
 # MLflow
 mlflow>=2.20
+
+# Frontend framework
+streamlit
+streamlit_gallery

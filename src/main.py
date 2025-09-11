@@ -2,15 +2,14 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.cluster import KMeans
 import math
+import streamlit as st
 
 from utils.rul import add_health_condition, sensor_trendability, sensor_fusion
 from utils.process import txt_to_pd, normalized_sensor, save_fig, generate_gif
 from utils.plot import plot_all, plot_clusters, plot_single_cluster, plot_health_indicator, plot_rul
 from models.similarity import ResidualSimilarityModel
 
-
-
-def main():
+def rul_predict():
 
     # Load training and test data
     train = txt_to_pd("data/Challenge_Data/train.txt")
@@ -95,7 +94,7 @@ def main():
     k=50
     mdl = ResidualSimilarityModel(k=k).fit(train_fused)
     # Evaluate on one validation engine at 50%, 70%, 90%
-    vidx = 3 if len(val_fused) >= 3 else 0  # pick the 3rd one if available
+    vidx = 3  # pick the 3rd one if available
     series = val_fused[vidx]["health_indicator"].values
     n = len(series)
 
@@ -116,6 +115,40 @@ def main():
 
     # Generate gif from 5-100% life
     generate_gif()
+
+    # Perform evaluation on validation set
+    k=50
+    mdl = ResidualSimilarityModel(k=k).fit(train_fused)
+    # Evaluate on one validation engine at 50%, 70%, 90%
+    vidx = 3 if len(val_fused) >= 3 else 0  # pick the 3rd one if available
+    series = val_fused[vidx]["health_indicator"].values
+    n = len(series)
+
+# from streamlit_gallery import apps, components
+# from streamlit_gallery.utils.page import page_group
+
+def main():
+
+    st.set_page_config(page_title="RUL Prediction")
+    st.header("Remaining Useful Life Prediction")
+    # page = page_group("p")
+
+    # with st.sidebar:
+    #     st.title("RUL Prediction Settings")
+
+    #     with st.expander("✨ FLOW", True):
+    #         page.item("Machine Learning", apps.gallery, default=True)
+    #         page.item("Deep Learning", apps.gallery, default=True)
+
+    #     with st.expander("🧩 PARAMETERS", True):
+    #         page.item("Ace editor", components.ace_editor)
+    #         page.item("Disqus", components.disqus)
+    #         page.item("Elements⭐", components.elements)
+    #         page.item("Pandas profiling", components.pandas_profiling)
+    #         page.item("Quill editor", components.quill_editor)
+    #         page.item("React player", components.react_player)
+        
+    #     page.show()
 
 
 if __name__ == "__main__":
