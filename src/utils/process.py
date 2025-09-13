@@ -55,17 +55,22 @@ PROJECT_ROOT_DIR = "."
 
 IMAGES_PATH = os.path.join(PROJECT_ROOT_DIR, "src/figures/")
 os.makedirs(IMAGES_PATH, exist_ok=True)
+IMAGES_PATH2 = os.path.join(PROJECT_ROOT_DIR, "src/figures/RUL")
+os.makedirs(IMAGES_PATH2, exist_ok=True)
 
 def save_fig(fig_id, tight_layout=False, fig_extension="png", resolution=300):
-    path = os.path.join(IMAGES_PATH, fig_id + "." + fig_extension)
+    if "RUL" in fig_id:
+        path = os.path.join(IMAGES_PATH2, fig_id + "." + fig_extension)
+    else:
+        path = os.path.join(IMAGES_PATH, fig_id + "." + fig_extension)
     print("Saving figure", fig_id)
     if tight_layout:
         plt.tight_layout()
     plt.savefig(path, format=fig_extension, dpi=resolution)
 
 def generate_gif():
-    img_dir =  "src/figures/"  
-    gif_path = "src/figures/RUL.gif" 
+    img_dir =  "src/figures/RUL/"  
+    gif_path = "src/figures/RUL/RUL.gif" 
     img_list = [f for f in os.listdir(img_dir) if f.endswith('.png')]
     images = [Image.open(img_dir + img).convert('RGBA') for img in img_list]
     images[0].save(gif_path, save_all=True, append_images=images[1:], optimize=False, duration=1000, loop=0)

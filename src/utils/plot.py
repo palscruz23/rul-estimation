@@ -1,8 +1,10 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import math
 from typing import Optional, Tuple, Sequence, Union
 from sklearn.cluster import KMeans
 from models.similarity import ResidualSimilarityModel
+from utils.process import txt_to_pd, normalized_sensor, save_fig, generate_gif
 import pandas as pd
 
 
@@ -17,6 +19,8 @@ def plot_all(train):
         axs[i//5, i-(i//5)*5].set_ylabel(train.columns[i+4])
     # Adjust layout to prevent overlapping titles/labels
     plt.tight_layout()
+    plt.grid(True)
+    save_fig("plot_all", tight_layout=True, fig_extension="png", resolution=300)
 
 def plot_clusters(op_data):
     # Create and fit K-Means model using the optimal cluster number (k=6)
@@ -35,9 +39,11 @@ def plot_clusters(op_data):
     ax.set_xlabel('X axis')
     ax.set_ylabel('Y axis')
     ax.set_zlabel('Z axis')
-    plt.show()
+    ax.grid(True)
+    save_fig("plot_clusters", tight_layout=True, fig_extension="png", resolution=300)
 
-def plot_single_cluster(train):
+
+def plot_single_cluster(train, op_data):
     # Create and fit K-Means model using the optimal cluster number (k=6)
     kmeans = KMeans(n_clusters=6, random_state=42)
     labels = kmeans.fit_predict(op_data)
@@ -52,20 +58,26 @@ def plot_single_cluster(train):
                     color='skyblue', alpha=0.7, edgecolors='black', linewidths=0.5)
         axs[i//5, i-(i//5)*5].set_xlabel('Time')
         axs[i//5, i-(i//5)*5].set_ylabel(train.columns[i+4])
-
+        axs[i//5, i-(i//5)*5].grid(True)
     # Adjust layout to prevent overlapping titles/labels
     plt.tight_layout()
+    save_fig("plot_single_cluster", tight_layout=True, fig_extension="png", resolution=300)
+
 
 def plot_health_indicator(train_fused):
     # Plot
+    plt.figure()
     for i in range(len(train_fused[:10])):
-        plt.plot(np.arange(1, len(train_fused[i])+1), train_fused[i], label=i+1)       # actual data points
-        plt.xlabel('X')
-        plt.ylabel('y')
-        # plt.ylim(0)
-        plt.legend()
-        plt.title('Training data Health Indicator')
-        plt.show()
+        plt.plot(np.arange(1, len(train_fused[i])+1), train_fused[i], label="Engine " + str(i+1)) 
+        plt.plot(len(train_fused[i])+1, train_fused[i].iloc[-1], marker='X', color="black")        # actual data points
+    plt.xlabel('Operating Cycles')
+    plt.ylabel('Health Indicator')
+    # plt.ylim(0)
+    plt.legend()
+    plt.grid(True)
+    plt.title('Training data Health Indicator')
+    save_fig("plot_health_indicator", tight_layout=True, fig_extension="png", resolution=300)
+
 
 def plot_rul(model: ResidualSimilarityModel,
             df: pd.DataFrame,
@@ -122,3 +134,52 @@ def plot_rul(model: ResidualSimilarityModel,
     axes[1].legend()
     axes[1].set_title('Engine RUL Distribution from Neighbor Samples at ' + str(frac) + '% Life')
     axes[1].grid(True)
+
+def plot_val(k, mdl, train_fused, val_fused, val_units):
+
+    # Perform evaluation on validation set
+    k=k
+    mdl = ResidualSimilarityModel(k=k).fit(train_fused)
+    # Evaluate on one validation engine at 50%, 70%, 90%
+    vidx = val_units 
+
+    prediction = pd.DataFrame({'5%': [], '10%': [], '15%': [], 
+                            '20%': [], '25%': [], '30%': [], '35%': [], '40%': [], 
+                            '45%': [], '50%': [], '55%': [], '60%': [], '65%': [], 
+                            '70%': [], '75%': [], '80%': [], '85%': [], '90%': [], 
+                            '95%': [], '100%': []})
+
+    truth = pd.DataFrame({'5%': [], '10%': [], '15%': [], 
+                            '20%': [], '25%': [], '30%': [], '35%': [], '40%': [], 
+                            '45%': [], '50%': [], '55%': [], '60%': [], '65%': [], 
+                            '70%': [], '75%': [], '80%': [], '85%': [], '90%': [], 
+                            '95%': [], '100%': []})
+
+    for vidx in range(len(val_fused)):
+        series = val_fused[vidx]["health_indicator"].values
+        n = len(series)
+        ypred = []
+        yhat = []
+        # Plot
+        for i in range(5,105,5):
+            frac = i / 100
+            L = int(math.ceil(n * frac))
+            obs = pd.DataFrame({"health_indicator": series[:L]})
+            est, (lo, hi), nn_ruls, nn_idx, neighbor_ruls = mdl.predict_rul_distribution(obs)
+            true_rul = n - L
+            ypred.append(est)
+            yhat.append(true_rul)
+        prediction.loc[len(prediction)] = ypred
+        truth.loc[len(truth)] = yhat
+    error = truth - prediction
+    # Plot
+    plt.figure(figsize=(14,10))
+    plt.plot(error.mean().index, error.mean(), label="Mean Validation Error of " +str(len(val_fused)) + "Engines")      
+    plt.fill_between(error.mean().index, error.min(), error.max(), alpha=0.3, label="Validation Error Band")
+    plt.xlabel('Percent Operating Life')
+    plt.ylabel('Error in cycles (True - Predicted)')
+    # plt.ylim(0)
+    plt.legend()
+    plt.title('True RUL vs Predicted RUL')
+    plt.grid()
+    save_fig("plot_val", tight_layout=True, fig_extension="png", resolution=300)

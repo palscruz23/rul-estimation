@@ -17,7 +17,7 @@ def add_health_condition(df):
     x_sensor = x_sensor.set_index("Unit Number")
     return x_sensor, y_sensor
 
-def sensor_trendability(x_train):
+def sensor_trendability(x_train, k):
     # Linear Regression on each sensor for RUL
     fusion_model = LinearRegression()
     slope = []
@@ -33,8 +33,8 @@ def sensor_trendability(x_train):
                 sensor_slope.append(fusion_model.coef_[0])
             sensor_median = np.abs(float(np.median(sensor_slope)))
             slope.append((sensor_median, sensor))
-            print(sensor, sensor_median)
-    slope = sorted(slope, reverse=True)[:8]
+            # print(sensor, sensor_median)
+    slope = sorted(slope, reverse=True)[:k]
     selected_sensors = [i[1] for i in slope]
     return selected_sensors
 

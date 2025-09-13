@@ -11,7 +11,7 @@ The PHM08 dataset includes:
 - **Degradation trajectories**: Each engine's data spans from normal operation to failure.
 - **Training and test sets**: Provided for model development and evaluation.
 
-More details: [PHM08 Challenge Data Set](https://data.nasa.gov/dataset/phm-2008-challenge)
+Source: [PHM08 Challenge Data Set](https://data.nasa.gov/dataset/phm-2008-challenge)
 
 ## 🚀 To get started with RUL predicton project:
 
@@ -28,9 +28,9 @@ More details: [PHM08 Challenge Data Set](https://data.nasa.gov/dataset/phm-2008-
    pip install -r requirements.txt
    ```
 
-3. Run the RUL prediction script
+3. Open streamlit app for the RUL prediction visualization
     ```
-   python src\main.py 
+   streamlit run Main.py
    ```
 
 ## 📚 Projects Overview
@@ -46,20 +46,24 @@ More details: [PHM08 Challenge Data Set](https://data.nasa.gov/dataset/phm-2008-
    - Perform Linear Regression on each sensor to get trendability
    - Perform sensor fusion to develop health indicator
    - Develop Residual-similarity model using Degree-2 polynomial fit
-   - Plot health indicator of validation enginer from 5% to 100% operating life
+   - Plot health indicator of validation engine from 5% to 100% operating life
 - Notebook: 
    ```
-   notebooks/Engine Remaining Useful Life using ML.ipynb
+   notebooks/RUL using ML.ipynb
    ```
-
- Methodology inspired by MATLAB Similarity-Based Remaining Useful Life Estimation (https://au.mathworks.com/help/predmaint/ug/similarity-based-remaining-useful-life-estimation.html)
 
 #### 📉 RUL Prediction using ML Demo
 
  ![RUL Prediction Demo](src/figures/RUL.gif)
 
- ### <i>Remaining Useful Life Prediction using deep learning techniques</i> (Under construction)
- - Data Processing
+#### 📃 References
+[1] [MATLAB Similarity-Based Remaining Useful Life Estimation](https://au.mathworks.com/help/predmaint/ug/similarity-based-remaining-useful-life-estimation.html)
+
+[2] [A similarity-based prognostics approach for Remaining Useful Life estimation of engineered systems](https://ieeexplore.ieee.org/document/4711421)
+
+
+ ### <i>Remaining Useful Life Prediction using deep learning techniques</i> (soon)
+ <!-- - Data Processing
    - Load training and test data
    - Split data set into training and validation sets
    - Create PHM08RULDataset dataset class
@@ -73,8 +77,8 @@ More details: [PHM08 Challenge Data Set](https://data.nasa.gov/dataset/phm-2008-
    - Perform prediction on test data.
   - Notebook: 
       ```
-      notebooks/Engine Remaining Useful Life using DL.ipynb
-      ```
+      notebooks/RUL using DL.ipynb
+      ``` -->
 
 ## 📜 License
 
