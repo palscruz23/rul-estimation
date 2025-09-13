@@ -1,6 +1,6 @@
-# Remaining Useful Life Prediction of Turbofan Engines
+# Remaining Useful Life Estimation of Turbofan Engines
 
-This repository contains a machine learning project aimed at predicting the Remaining Useful Life (RUL) of turbofan engines using the **PHM08 Prognostics Data Challenge Dataset** provided by NASA. Accurate RUL prediction can enable proactive maintenance, reduce operational costs, and prevent unexpected failures.
+This repository contains a machine learning project aimed at predicting the Remaining Useful Life (RUL) of turbofan engines using the **PHM08 Prognostics Data Challenge Dataset** provided by NASA. Accurate RUL Estimation can enable proactive maintenance, reduce operational costs, and prevent unexpected failures.
 
 ## 📊 Dataset Overview
 
@@ -18,8 +18,8 @@ Source: [PHM08 Challenge Data Set](https://data.nasa.gov/dataset/phm-2008-challe
 1. Clone the repository:
 
    ```
-   git clone https://github.com/palscruz23/rul-prediction.git
-   cd rul-prediction
+   git clone estimate_rul
+   cd rul-estimation
    ```
 
 2. Install dependencies
@@ -28,20 +28,20 @@ Source: [PHM08 Challenge Data Set](https://data.nasa.gov/dataset/phm-2008-challe
    pip install -r requirements.txt
    ```
 
-3. Open streamlit app for the RUL prediction visualization
+3. Open streamlit app for the RUL Estimation visualization
     ```
    streamlit run Main.py
    ```
 
 ## 📚 Projects Overview
-### <i>Remaining Useful Life Prediction using machine learning techniques</i>
+### <i>Remaining Useful Life Estimation using machine learning techniques</i>
  - Data Exploration
    - Load training and test data
    - Utilise unsupervised learning (K-means) to get operational parameter clusters
  - Data Processing
    - Split data set into training and validation sets
    - Apply Standard Scaler to normalise different sensor measurements
- - Remaining Useful Life Prediction
+ - Remaining Useful Life Estimation
    - Construct Asset Health Indicator
    - Perform Linear Regression on each sensor to get trendability
    - Perform sensor fusion to develop health indicator
@@ -52,9 +52,9 @@ Source: [PHM08 Challenge Data Set](https://data.nasa.gov/dataset/phm-2008-challe
    notebooks/RUL using ML.ipynb
    ```
 
-#### 📉 RUL Prediction using ML Demo
+#### 📉 RUL Estimation using ML Demo
 
- ![RUL Prediction Demo](src/figures/RUL.gif)
+ ![RUL Estimation Demo](src/figures/RUL/RUL.gif)
 
 #### 📃 References
 [1] [MATLAB Similarity-Based Remaining Useful Life Estimation](https://au.mathworks.com/help/predmaint/ug/similarity-based-remaining-useful-life-estimation.html)
@@ -62,19 +62,19 @@ Source: [PHM08 Challenge Data Set](https://data.nasa.gov/dataset/phm-2008-challe
 [2] [A similarity-based prognostics approach for Remaining Useful Life estimation of engineered systems](https://ieeexplore.ieee.org/document/4711421)
 
 
- ### <i>Remaining Useful Life Prediction using deep learning techniques</i> (soon)
+ ### <i>Remaining Useful Life Estimation using deep learning techniques</i> (soon)
  <!-- - Data Processing
    - Load training and test data
    - Split data set into training and validation sets
    - Create PHM08RULDataset dataset class
- - Remaining Useful Life Prediction
+ - Remaining Useful Life Estimation
    - Initiate ML flow experiment
    - Create model classes for RNN, LSTM, Seq2Seq and Informer
    - Prepare training and validation loops
    - Perform grid search for hyperparameter tuning
    - Select best model
    - Perform bias vs variance analysis
-   - Perform prediction on test data.
+   - Perform Estimation on test data.
   - Notebook: 
       ```
       notebooks/RUL using DL.ipynb

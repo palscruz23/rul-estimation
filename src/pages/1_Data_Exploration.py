@@ -6,7 +6,7 @@ from utils.process import txt_to_pd, normalized_sensor, save_fig, generate_gif
 def main():
     st.set_page_config(page_title="Data Exploration and Processing", page_icon="📊")
     st.title("📊 Data Exploration and Processing")
-    st.sidebar.markdown("[💻 GitHub Repository](https://github.com/palscruz23/rul-prediction)")
+    st.sidebar.markdown("[💻 GitHub Repository](https://github.com/palscruz23/rul-estimation)")
 
     # Dataset page
     st.header("PHM08 Prognostics Data Challenge Dataset")

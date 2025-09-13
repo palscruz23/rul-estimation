@@ -88,7 +88,7 @@ def data_process(params, engine):
     
     return x_train, x_val, x_test, val_units
 
-def predict_rul(params, engine, x_train, x_val, x_test, val_units):
+def estimate_rul(params, engine, x_train, x_val, x_test, val_units):
 
     # Perform Linear Regression on each sensor to get trendability
     # Select most trendable sensors
@@ -133,9 +133,9 @@ def predict_rul(params, engine, x_train, x_val, x_test, val_units):
 # from streamlit_gallery.utils.page import page_group
 
 def main():
-    st.set_page_config(page_title="RUL Prediction", page_icon="🚀",)
-    st.title("🚀 RUL Prediction Home Page 🚀")
-    st.sidebar.markdown("[💻 GitHub Repository](https://github.com/palscruz23/rul-prediction)")
+    st.set_page_config(page_title="RUL Estimation", page_icon="🚀",)
+    st.title("🚀 RUL Estimation Home Page 🚀")
+    st.sidebar.markdown("[💻 GitHub Repository](https://github.com/palscruz23/rul-estimation)")
 
     # Home page
     st.markdown(
@@ -147,7 +147,7 @@ def main():
         Predictive maintenance (PdM) provides a smarter alternative. By leveraging sensor data, machine learning, and advanced analytics, PdM enables organizations to forecast equipment health and anticipate failures before they occur. This approach ensures that maintenance is performed only when necessary, minimizing downtime while maximizing asset availability.
         <br>
         
-        A key element of predictive maintenance is Remaining Useful Life (RUL) prediction. RUL models estimate how much longer a component or system can operate safely and effectively before it reaches the end of its life. 
+        A key element of predictive maintenance is Remaining Useful Life (RUL) estimation. RUL models estimate how much longer a component or system can operate safely and effectively before it reaches the end of its life. 
         
         One powerful approach is the similarity-based RUL model. This approach uses operational parameters and sensor information from start of equipment life until it fails. Instead of relying purely on complex physics or massive amounts of labeled data, similarity models:
 
@@ -155,8 +155,7 @@ def main():
         - Find the “closest match” in past data.
         - Estimate the RUL based on how those similar systems degraded over time.
 
-        
-        RUL prediction has the potential to create a strategic advantage — enabling higher reliability, safer operations, and better results.
+        Accurate RUL Estimation can enable proactive maintenance, reduce operational costs, and prevent unexpected failures.
         </div>
         """,
         unsafe_allow_html=True)
@@ -169,18 +168,18 @@ def main():
     if st.session_state['run'] == 1:
         params = [0.1, 8, 10]
         engine = 1
-        if st.button("Start RUL Prediction"):
+        if st.button("Start RUL Estimation"):
             with st.spinner("Processing data..."):
                 x_train, x_val, x_test, val_units = data_process(params, engine)
-                st.success("Data loaded and processed! Ready for predicting remaining life.")
+                st.success("Data loaded and processed! Ready for estimating remaining life.")
             with st.spinner("Predicting RUL..."):
-                predict_rul(params, engine, x_train, x_val, x_test, val_units)
-                st.success("Remaining Useful Life prediction has been completed!")
+                estimate_rul(params, engine, x_train, x_val, x_test, val_units)
+                st.success("Remaining Useful Life estimation has been completed!")
                 st.session_state['run'] = 0
     else:
         st.markdown(
             """
-            Existing data and prediction is loaded.
+            Existing data and estimation is loaded.
             """
 
         )
