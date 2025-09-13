@@ -174,12 +174,12 @@ def plot_val(k, mdl, train_fused, val_fused, val_units):
     error = truth - prediction
     # Plot
     plt.figure(figsize=(14,10))
-    plt.plot(error.mean().index, error.mean(), label="Mean Validation Error of " +str(len(val_fused)) + "Engines")      
+    plt.plot(error.mean().index, error.mean(), label="Mean Validation Error of " +str(len(val_fused)) + " Engines")      
     plt.fill_between(error.mean().index, error.min(), error.max(), alpha=0.3, label="Validation Error Band")
     plt.xlabel('Percent Operating Life')
     plt.ylabel('Error in cycles (True - Predicted)')
     # plt.ylim(0)
-    plt.legend()
+    plt.legend(fontsize=15)
     plt.title('True RUL vs Predicted RUL')
     plt.grid()
     save_fig("plot_val", tight_layout=True, fig_extension="png", resolution=300)
