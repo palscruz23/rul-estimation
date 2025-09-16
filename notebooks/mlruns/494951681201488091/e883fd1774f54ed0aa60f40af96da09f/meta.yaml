@@ -1,0 +1,15 @@
+artifact_uri: file:///c:\Users\61422\Desktop\OMSCS\projects\Back to Basics\rul-estimation\notebooks\mlruns/494951681201488091/e883fd1774f54ed0aa60f40af96da09f/artifacts
+end_time: 1758028788943
+entry_point_name: ''
+experiment_id: '494951681201488091'
+lifecycle_stage: active
+run_id: e883fd1774f54ed0aa60f40af96da09f
+run_name: painted-cow-890
+run_uuid: e883fd1774f54ed0aa60f40af96da09f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758028776773
+status: 3
+tags: []
+user_id: sagemaker-user

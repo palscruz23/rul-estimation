@@ -1,0 +1,15 @@
+artifact_uri: file:///c:\Users\61422\Desktop\OMSCS\projects\Back to Basics\rul-estimation\notebooks\mlruns/494951681201488091/55b12e82a9e14e0c8cc1d452d34061a8/artifacts
+end_time: 1758029513328
+entry_point_name: ''
+experiment_id: '494951681201488091'
+lifecycle_stage: active
+run_id: 55b12e82a9e14e0c8cc1d452d34061a8
+run_name: masked-mule-69
+run_uuid: 55b12e82a9e14e0c8cc1d452d34061a8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758029497810
+status: 3
+tags: []
+user_id: sagemaker-user

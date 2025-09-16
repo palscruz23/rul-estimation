@@ -1,0 +1,15 @@
+artifact_uri: file:///c:\Users\61422\Desktop\OMSCS\projects\Back to Basics\rul-estimation\notebooks\mlruns/494951681201488091/d114df98d8d945a8b9b267e1d3f9612c/artifacts
+end_time: 1758029038452
+entry_point_name: ''
+experiment_id: '494951681201488091'
+lifecycle_stage: active
+run_id: d114df98d8d945a8b9b267e1d3f9612c
+run_name: able-steed-826
+run_uuid: d114df98d8d945a8b9b267e1d3f9612c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758029011953
+status: 3
+tags: []
+user_id: sagemaker-user

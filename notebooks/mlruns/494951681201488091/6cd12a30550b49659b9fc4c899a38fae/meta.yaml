@@ -1,0 +1,15 @@
+artifact_uri: file:///c:\Users\61422\Desktop\OMSCS\projects\Back to Basics\rul-estimation\notebooks\mlruns/494951681201488091/6cd12a30550b49659b9fc4c899a38fae/artifacts
+end_time: 1758027781845
+entry_point_name: ''
+experiment_id: '494951681201488091'
+lifecycle_stage: active
+run_id: 6cd12a30550b49659b9fc4c899a38fae
+run_name: upbeat-trout-149
+run_uuid: 6cd12a30550b49659b9fc4c899a38fae
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758027770262
+status: 3
+tags: []
+user_id: sagemaker-user

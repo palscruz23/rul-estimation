@@ -1,0 +1,15 @@
+artifact_uri: file:///c:\Users\61422\Desktop\OMSCS\projects\Back to Basics\rul-estimation\notebooks\mlruns/494951681201488091/bff5c8eff4af4835a902facc2bd6024d/artifacts
+end_time: 1758028939180
+entry_point_name: ''
+experiment_id: '494951681201488091'
+lifecycle_stage: active
+run_id: bff5c8eff4af4835a902facc2bd6024d
+run_name: abundant-goose-571
+run_uuid: bff5c8eff4af4835a902facc2bd6024d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758028918105
+status: 3
+tags: []
+user_id: sagemaker-user

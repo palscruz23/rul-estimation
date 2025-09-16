@@ -1,0 +1,15 @@
+artifact_uri: file:///c:\Users\61422\Desktop\OMSCS\projects\Back to Basics\rul-estimation\notebooks\mlruns/494951681201488091/43081036977c4754b37acfb6b1145baa/artifacts
+end_time: 1758028442766
+entry_point_name: ''
+experiment_id: '494951681201488091'
+lifecycle_stage: active
+run_id: 43081036977c4754b37acfb6b1145baa
+run_name: zealous-grouse-107
+run_uuid: 43081036977c4754b37acfb6b1145baa
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758028226951
+status: 3
+tags: []
+user_id: sagemaker-user

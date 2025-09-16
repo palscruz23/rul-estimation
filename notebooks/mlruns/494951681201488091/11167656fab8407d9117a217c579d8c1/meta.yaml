@@ -1,0 +1,15 @@
+artifact_uri: file:///c:\Users\61422\Desktop\OMSCS\projects\Back to Basics\rul-estimation\notebooks\mlruns/494951681201488091/11167656fab8407d9117a217c579d8c1/artifacts
+end_time: 1758027862870
+entry_point_name: ''
+experiment_id: '494951681201488091'
+lifecycle_stage: active
+run_id: 11167656fab8407d9117a217c579d8c1
+run_name: wistful-bass-977
+run_uuid: 11167656fab8407d9117a217c579d8c1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758027850067
+status: 3
+tags: []
+user_id: sagemaker-user

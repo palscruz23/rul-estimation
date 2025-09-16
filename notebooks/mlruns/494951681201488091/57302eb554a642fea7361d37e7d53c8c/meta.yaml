@@ -1,0 +1,15 @@
+artifact_uri: file:///c:\Users\61422\Desktop\OMSCS\projects\Back to Basics\rul-estimation\notebooks\mlruns/494951681201488091/57302eb554a642fea7361d37e7d53c8c/artifacts
+end_time: 1758028711403
+entry_point_name: ''
+experiment_id: '494951681201488091'
+lifecycle_stage: active
+run_id: 57302eb554a642fea7361d37e7d53c8c
+run_name: unruly-snake-423
+run_uuid: 57302eb554a642fea7361d37e7d53c8c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758028700420
+status: 3
+tags: []
+user_id: sagemaker-user

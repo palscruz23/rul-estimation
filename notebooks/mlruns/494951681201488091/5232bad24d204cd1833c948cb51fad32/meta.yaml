@@ -1,0 +1,15 @@
+artifact_uri: file:///c:\Users\61422\Desktop\OMSCS\projects\Back to Basics\rul-estimation\notebooks\mlruns/494951681201488091/5232bad24d204cd1833c948cb51fad32/artifacts
+end_time: 1758028487553
+entry_point_name: ''
+experiment_id: '494951681201488091'
+lifecycle_stage: active
+run_id: 5232bad24d204cd1833c948cb51fad32
+run_name: serious-shrew-599
+run_uuid: 5232bad24d204cd1833c948cb51fad32
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758028463550
+status: 3
+tags: []
+user_id: sagemaker-user

@@ -1,0 +1,15 @@
+artifact_uri: file:///c:\Users\61422\Desktop\OMSCS\projects\Back to Basics\rul-estimation\notebooks\mlruns/494951681201488091/d64d9e28da7c45a6b2e28361fbe2599b/artifacts
+end_time: 1758027849935
+entry_point_name: ''
+experiment_id: '494951681201488091'
+lifecycle_stage: active
+run_id: d64d9e28da7c45a6b2e28361fbe2599b
+run_name: victorious-skunk-833
+run_uuid: d64d9e28da7c45a6b2e28361fbe2599b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758027837185
+status: 3
+tags: []
+user_id: sagemaker-user

@@ -1,0 +1,15 @@
+artifact_uri: file:///c:\Users\61422\Desktop\OMSCS\projects\Back to Basics\rul-estimation\notebooks\mlruns/494951681201488091/723c2230a39e49718aab35ff0a951ab7/artifacts
+end_time: 1758027837055
+entry_point_name: ''
+experiment_id: '494951681201488091'
+lifecycle_stage: active
+run_id: 723c2230a39e49718aab35ff0a951ab7
+run_name: thundering-moth-923
+run_uuid: 723c2230a39e49718aab35ff0a951ab7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758027815419
+status: 3
+tags: []
+user_id: sagemaker-user

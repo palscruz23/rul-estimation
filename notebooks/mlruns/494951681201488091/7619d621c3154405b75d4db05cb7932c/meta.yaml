@@ -1,0 +1,15 @@
+artifact_uri: file:///c:\Users\61422\Desktop\OMSCS\projects\Back to Basics\rul-estimation\notebooks\mlruns/494951681201488091/7619d621c3154405b75d4db05cb7932c/artifacts
+end_time: 1758029317249
+entry_point_name: ''
+experiment_id: '494951681201488091'
+lifecycle_stage: active
+run_id: 7619d621c3154405b75d4db05cb7932c
+run_name: bright-goose-571
+run_uuid: 7619d621c3154405b75d4db05cb7932c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758029290804
+status: 3
+tags: []
+user_id: sagemaker-user

@@ -1,0 +1,15 @@
+artifact_uri: file:///c:\Users\61422\Desktop\OMSCS\projects\Back to Basics\rul-estimation\notebooks\mlruns/494951681201488091/19b87a31f6364af28308311ad6f21365/artifacts
+end_time: 1758027971372
+entry_point_name: ''
+experiment_id: '494951681201488091'
+lifecycle_stage: active
+run_id: 19b87a31f6364af28308311ad6f21365
+run_name: righteous-robin-894
+run_uuid: 19b87a31f6364af28308311ad6f21365
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758027949152
+status: 3
+tags: []
+user_id: sagemaker-user

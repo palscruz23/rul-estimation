@@ -1,0 +1,15 @@
+artifact_uri: file:///c:\Users\61422\Desktop\OMSCS\projects\Back to Basics\rul-estimation\notebooks\mlruns/494951681201488091/d0c46062032a44c1be1defb582e8cb46/artifacts
+end_time: 1758028722532
+entry_point_name: ''
+experiment_id: '494951681201488091'
+lifecycle_stage: active
+run_id: d0c46062032a44c1be1defb582e8cb46
+run_name: abundant-ram-956
+run_uuid: d0c46062032a44c1be1defb582e8cb46
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758028711522
+status: 3
+tags: []
+user_id: sagemaker-user

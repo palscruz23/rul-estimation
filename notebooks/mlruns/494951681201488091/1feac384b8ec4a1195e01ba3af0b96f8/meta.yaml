@@ -1,0 +1,15 @@
+artifact_uri: file:///c:\Users\61422\Desktop\OMSCS\projects\Back to Basics\rul-estimation\notebooks\mlruns/494951681201488091/1feac384b8ec4a1195e01ba3af0b96f8/artifacts
+end_time: 1758027770126
+entry_point_name: ''
+experiment_id: '494951681201488091'
+lifecycle_stage: active
+run_id: 1feac384b8ec4a1195e01ba3af0b96f8
+run_name: worried-rat-278
+run_uuid: 1feac384b8ec4a1195e01ba3af0b96f8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758027750791
+status: 3
+tags: []
+user_id: sagemaker-user

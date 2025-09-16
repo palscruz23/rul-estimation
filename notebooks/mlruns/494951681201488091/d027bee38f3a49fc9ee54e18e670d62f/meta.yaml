@@ -1,0 +1,15 @@
+artifact_uri: file:///c:\Users\61422\Desktop\OMSCS\projects\Back to Basics\rul-estimation\notebooks\mlruns/494951681201488091/d027bee38f3a49fc9ee54e18e670d62f/artifacts
+end_time: 1758028892769
+entry_point_name: ''
+experiment_id: '494951681201488091'
+lifecycle_stage: active
+run_id: d027bee38f3a49fc9ee54e18e670d62f
+run_name: intrigued-koi-488
+run_uuid: d027bee38f3a49fc9ee54e18e670d62f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758028871397
+status: 3
+tags: []
+user_id: sagemaker-user

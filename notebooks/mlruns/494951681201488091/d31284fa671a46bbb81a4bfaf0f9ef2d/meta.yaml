@@ -1,0 +1,15 @@
+artifact_uri: file:///c:\Users\61422\Desktop\OMSCS\projects\Back to Basics\rul-estimation\notebooks\mlruns/494951681201488091/d31284fa671a46bbb81a4bfaf0f9ef2d/artifacts
+end_time: 1758028827116
+entry_point_name: ''
+experiment_id: '494951681201488091'
+lifecycle_stage: active
+run_id: d31284fa671a46bbb81a4bfaf0f9ef2d
+run_name: valuable-cow-459
+run_uuid: d31284fa671a46bbb81a4bfaf0f9ef2d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758028808142
+status: 3
+tags: []
+user_id: sagemaker-user

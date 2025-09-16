@@ -1,0 +1,15 @@
+artifact_uri: file:///c:\Users\61422\Desktop\OMSCS\projects\Back to Basics\rul-estimation\notebooks\mlruns/494951681201488091/1eea0be1ec094a659a5f6021624a0c7b/artifacts
+end_time: 1758028019773
+entry_point_name: ''
+experiment_id: '494951681201488091'
+lifecycle_stage: active
+run_id: 1eea0be1ec094a659a5f6021624a0c7b
+run_name: angry-bear-905
+run_uuid: 1eea0be1ec094a659a5f6021624a0c7b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758027997971
+status: 3
+tags: []
+user_id: sagemaker-user

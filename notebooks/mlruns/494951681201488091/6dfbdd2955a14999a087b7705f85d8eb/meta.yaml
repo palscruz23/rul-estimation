@@ -1,0 +1,15 @@
+artifact_uri: file:///c:\Users\61422\Desktop\OMSCS\projects\Back to Basics\rul-estimation\notebooks\mlruns/494951681201488091/6dfbdd2955a14999a087b7705f85d8eb/artifacts
+end_time: 1758028213472
+entry_point_name: ''
+experiment_id: '494951681201488091'
+lifecycle_stage: active
+run_id: 6dfbdd2955a14999a087b7705f85d8eb
+run_name: mercurial-gnat-650
+run_uuid: 6dfbdd2955a14999a087b7705f85d8eb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758028200285
+status: 3
+tags: []
+user_id: sagemaker-user

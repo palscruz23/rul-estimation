@@ -1,0 +1,15 @@
+artifact_uri: file:///c:\Users\61422\Desktop\OMSCS\projects\Back to Basics\rul-estimation\notebooks\mlruns/494951681201488091/6f569d29c5e14702977d9ac14b4e5e14/artifacts
+end_time: 1758029343855
+entry_point_name: ''
+experiment_id: '494951681201488091'
+lifecycle_stage: active
+run_id: 6f569d29c5e14702977d9ac14b4e5e14
+run_name: brawny-fox-50
+run_uuid: 6f569d29c5e14702977d9ac14b4e5e14
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758029317370
+status: 3
+tags: []
+user_id: sagemaker-user

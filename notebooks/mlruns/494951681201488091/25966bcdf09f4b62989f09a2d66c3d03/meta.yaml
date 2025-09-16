@@ -1,0 +1,15 @@
+artifact_uri: file:///c:\Users\61422\Desktop\OMSCS\projects\Back to Basics\rul-estimation\notebooks\mlruns/494951681201488091/25966bcdf09f4b62989f09a2d66c3d03/artifacts
+end_time: 1758028123007
+entry_point_name: ''
+experiment_id: '494951681201488091'
+lifecycle_stage: active
+run_id: 25966bcdf09f4b62989f09a2d66c3d03
+run_name: luxuriant-jay-570
+run_uuid: 25966bcdf09f4b62989f09a2d66c3d03
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758028095522
+status: 3
+tags: []
+user_id: sagemaker-user

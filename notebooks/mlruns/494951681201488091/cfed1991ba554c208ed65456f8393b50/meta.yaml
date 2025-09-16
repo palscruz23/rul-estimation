@@ -1,0 +1,15 @@
+artifact_uri: file:///c:\Users\61422\Desktop\OMSCS\projects\Back to Basics\rul-estimation\notebooks\mlruns/494951681201488091/cfed1991ba554c208ed65456f8393b50/artifacts
+end_time: 1758029192099
+entry_point_name: ''
+experiment_id: '494951681201488091'
+lifecycle_stage: active
+run_id: cfed1991ba554c208ed65456f8393b50
+run_name: sassy-grouse-335
+run_uuid: cfed1991ba554c208ed65456f8393b50
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758029165054
+status: 3
+tags: []
+user_id: sagemaker-user

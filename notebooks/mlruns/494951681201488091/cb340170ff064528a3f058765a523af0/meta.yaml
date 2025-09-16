@@ -1,0 +1,15 @@
+artifact_uri: file:///c:\Users\61422\Desktop\OMSCS\projects\Back to Basics\rul-estimation\notebooks\mlruns/494951681201488091/cb340170ff064528a3f058765a523af0/artifacts
+end_time: 1758028533788
+entry_point_name: ''
+experiment_id: '494951681201488091'
+lifecycle_stage: active
+run_id: cb340170ff064528a3f058765a523af0
+run_name: skillful-wasp-453
+run_uuid: cb340170ff064528a3f058765a523af0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758028509781
+status: 3
+tags: []
+user_id: sagemaker-user

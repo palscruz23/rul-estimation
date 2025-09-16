@@ -1,0 +1,15 @@
+artifact_uri: file:///c:\Users\61422\Desktop\OMSCS\projects\Back to Basics\rul-estimation\notebooks\mlruns/494951681201488091/9eb8d69b611b4810a475a24666dcdab5/artifacts
+end_time: 1758028764276
+entry_point_name: ''
+experiment_id: '494951681201488091'
+lifecycle_stage: active
+run_id: 9eb8d69b611b4810a475a24666dcdab5
+run_name: calm-finch-769
+run_uuid: 9eb8d69b611b4810a475a24666dcdab5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758028743510
+status: 3
+tags: []
+user_id: sagemaker-user

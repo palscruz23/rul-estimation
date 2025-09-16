@@ -1,0 +1,15 @@
+artifact_uri: file:///c:\Users\61422\Desktop\OMSCS\projects\Back to Basics\rul-estimation\notebooks\mlruns/494951681201488091/a3366ab185c94329976e8abb6c139d1a/artifacts
+end_time: 1758027926745
+entry_point_name: ''
+experiment_id: '494951681201488091'
+lifecycle_stage: active
+run_id: a3366ab185c94329976e8abb6c139d1a
+run_name: fun-chimp-12
+run_uuid: a3366ab185c94329976e8abb6c139d1a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758027914844
+status: 3
+tags: []
+user_id: sagemaker-user
