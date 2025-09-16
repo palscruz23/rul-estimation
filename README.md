@@ -30,7 +30,7 @@ Source: [PHM08 Challenge Data Set](https://data.nasa.gov/dataset/phm-2008-challe
 
 3. Open streamlit app for the RUL Estimation visualization
     ```
-   streamlit run Main.py
+   streamlit run src/Main.py
    ```
 
 ## 📚 Projects Overview

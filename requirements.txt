@@ -24,4 +24,3 @@ mlflow>=2.20
 
 # Frontend framework
 streamlit
-streamlit_gallery
