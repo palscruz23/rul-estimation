@@ -1,0 +1,15 @@
+artifact_uri: file:///home/sagemaker-user/rul-estimation/notebooks/mlruns/714399029621557653/ca0cb10be7444911993d287ce63315f3/artifacts
+end_time: 1758113521927
+entry_point_name: ''
+experiment_id: '714399029621557653'
+lifecycle_stage: active
+run_id: ca0cb10be7444911993d287ce63315f3
+run_name: flawless-lamb-868
+run_uuid: ca0cb10be7444911993d287ce63315f3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758113509547
+status: 3
+tags: []
+user_id: sagemaker-user

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/sagemaker-user/rul-estimation/notebooks/mlruns/714399029621557653/79ba800389f44e2cb5fccb3a662483e2/artifacts
+end_time: 1758113211613
+entry_point_name: ''
+experiment_id: '714399029621557653'
+lifecycle_stage: active
+run_id: 79ba800389f44e2cb5fccb3a662483e2
+run_name: redolent-calf-955
+run_uuid: 79ba800389f44e2cb5fccb3a662483e2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758113199306
+status: 3
+tags: []
+user_id: sagemaker-user

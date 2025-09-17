@@ -1,0 +1,15 @@
+artifact_uri: file:///home/sagemaker-user/rul-estimation/notebooks/mlruns/714399029621557653/4173634462bd494d890ef94615dfc684/artifacts
+end_time: 1758113677325
+entry_point_name: ''
+experiment_id: '714399029621557653'
+lifecycle_stage: active
+run_id: 4173634462bd494d890ef94615dfc684
+run_name: lyrical-fowl-30
+run_uuid: 4173634462bd494d890ef94615dfc684
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758113664721
+status: 3
+tags: []
+user_id: sagemaker-user

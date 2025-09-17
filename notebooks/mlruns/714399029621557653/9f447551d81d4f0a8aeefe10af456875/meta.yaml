@@ -1,0 +1,15 @@
+artifact_uri: file:///home/sagemaker-user/rul-estimation/notebooks/mlruns/714399029621557653/9f447551d81d4f0a8aeefe10af456875/artifacts
+end_time: 1758112883510
+entry_point_name: ''
+experiment_id: '714399029621557653'
+lifecycle_stage: active
+run_id: 9f447551d81d4f0a8aeefe10af456875
+run_name: funny-squirrel-504
+run_uuid: 9f447551d81d4f0a8aeefe10af456875
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758112870249
+status: 3
+tags: []
+user_id: sagemaker-user
