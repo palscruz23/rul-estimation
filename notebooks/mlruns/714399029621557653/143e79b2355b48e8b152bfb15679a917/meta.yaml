@@ -1,0 +1,15 @@
+artifact_uri: file:///home/sagemaker-user/rul-estimation/notebooks/mlruns/714399029621557653/143e79b2355b48e8b152bfb15679a917/artifacts
+end_time: 1758112774995
+entry_point_name: ''
+experiment_id: '714399029621557653'
+lifecycle_stage: active
+run_id: 143e79b2355b48e8b152bfb15679a917
+run_name: bemused-stag-693
+run_uuid: 143e79b2355b48e8b152bfb15679a917
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758112752539
+status: 3
+tags: []
+user_id: sagemaker-user

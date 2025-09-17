@@ -1,0 +1,15 @@
+artifact_uri: file:///home/sagemaker-user/rul-estimation/notebooks/mlruns/714399029621557653/ad3b769ff8054268b52fadba2ca443d4/artifacts
+end_time: 1758113496981
+entry_point_name: ''
+experiment_id: '714399029621557653'
+lifecycle_stage: active
+run_id: ad3b769ff8054268b52fadba2ca443d4
+run_name: serious-stork-258
+run_uuid: ad3b769ff8054268b52fadba2ca443d4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758113475984
+status: 3
+tags: []
+user_id: sagemaker-user

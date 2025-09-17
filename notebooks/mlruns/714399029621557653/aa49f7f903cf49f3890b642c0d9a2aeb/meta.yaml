@@ -1,0 +1,15 @@
+artifact_uri: file:///home/sagemaker-user/rul-estimation/notebooks/mlruns/714399029621557653/aa49f7f903cf49f3890b642c0d9a2aeb/artifacts
+end_time: 1758113733611
+entry_point_name: ''
+experiment_id: '714399029621557653'
+lifecycle_stage: active
+run_id: aa49f7f903cf49f3890b642c0d9a2aeb
+run_name: powerful-trout-184
+run_uuid: aa49f7f903cf49f3890b642c0d9a2aeb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758113705585
+status: 3
+tags: []
+user_id: sagemaker-user

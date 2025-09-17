@@ -1,0 +1,15 @@
+artifact_uri: file:///home/sagemaker-user/rul-estimation/notebooks/mlruns/714399029621557653/89bbf91bd3da41aeb1ed7d9b7e77bff5/artifacts
+end_time: 1758113608788
+entry_point_name: ''
+experiment_id: '714399029621557653'
+lifecycle_stage: active
+run_id: 89bbf91bd3da41aeb1ed7d9b7e77bff5
+run_name: adaptable-sow-438
+run_uuid: 89bbf91bd3da41aeb1ed7d9b7e77bff5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758113592983
+status: 3
+tags: []
+user_id: sagemaker-user
