@@ -1,7 +1,6 @@
 import torch as torch
 import torch.nn as nn
 
-
 class ProbSparseSelfAttention(nn.Module):
     def __init__(self, d_model, n_heads):
         super().__init__()
@@ -63,8 +62,17 @@ class InformerEncoder(nn.Module):
 
 
 class InformerRUL(nn.Module):
-    def __init__(self, num_features, d_model=128, n_heads=4, num_layers=2, dropout=0.1):
+    def __init__(self, num_features, d_model=128, n_heads=4, num_layers=2, dropout=0.1, epochs=10, seq_len=100, batch_size=32):
         super().__init__()
+        self.num_features = num_features
+        self.d_model = d_model
+        self.n_heads = n_heads
+        self.num_layers = num_layers    
+        self.dropout = dropout
+        self.epochs = epochs
+        self.seq_len = seq_len
+        self.batch_size = batch_size
+        self.device = "cuda" if torch.cuda.is_available() else "cpu"
         self.input_proj = nn.Linear(num_features, d_model)
         self.encoder = InformerEncoder(num_layers, d_model, n_heads, dropout)
         self.regressor = nn.Sequential(
