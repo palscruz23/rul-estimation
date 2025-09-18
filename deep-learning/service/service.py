@@ -20,7 +20,7 @@ model = joblib.load(MODEL_PATH)
 seq_len = model.seq_len
 batch_size = model.batch_size
 device = model.device
-
+print(f"Model loaded: {model}, seq_len: {seq_len}, batch_size: {batch_size}, device: {device}")
 # FastAPI app
 app = FastAPI()
 
@@ -31,14 +31,10 @@ app = FastAPI()
 def predict(file: UploadFile = File(...)):
 
     """Handle TXT/CSV file upload"""
-    print("Client connected")
 
     try:
-        print("Try File read")
-
         contents =  file.file.read()
         decoded = contents.decode("utf-8")
-        print("File read")
         print(io.StringIO(decoded))
         # Detect CSV or TXT
         if file.filename.endswith(".csv"):
@@ -50,23 +46,27 @@ def predict(file: UploadFile = File(...)):
             df = pd.read_csv(io.StringIO(decoded), sep=r"\s+", header=None, names=cols) 
         else:
             raise HTTPException(status_code=400, detail="Only .csv or .txt files are supported")
-        print("data read")
 
         # Process data
         df = data_process(df)
+        feature_cols = df.columns.difference(["unit", "cycle", "max_cycle", "RUL"])
+        scaler = joblib.load("models/scaler.joblib")
+        df[feature_cols]  = scaler.transform(df[feature_cols])
         # Run prediction
         pred_dataset  = ServiceData(df, seq_len=seq_len)
         pred_loader = DataLoader(pred_dataset, batch_size=batch_size, shuffle=False)
         model.eval()
         preds = []
-
+        true_rul = []
         model.to(device)
         with torch.no_grad():
-            for x_pred, __ in pred_loader:
-                x_pred = x_pred.to(device)
+            for x_pred, y_pred in pred_loader:
+                # x_pred = x_pred.to(device)
+                x_pred, y_pred = x_pred.to(device), y_pred.to(device)
                 output = model(x_pred)
                 preds.extend(output.cpu().numpy().ravel().tolist())
-        return {"predictions": preds}
+                true_rul.extend(y_pred.cpu().numpy().ravel().tolist())
+        return {"predictions": preds, "true_rul": true_rul}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 

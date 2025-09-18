@@ -12,6 +12,7 @@ import time
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from torch.utils.data import Dataset, DataLoader
+import joblib
 
 def load_phm08(path, filename):
     cols = list(range(26))  # 26 columns
@@ -84,6 +85,7 @@ def data_split(train_df, seq_len, batch_size, test_size=0.1, random_state=42, te
     training_df[feature_cols] = scaler.fit_transform(training_df[feature_cols])
     val_df[feature_cols]   = scaler.transform(val_df[feature_cols])
     test_df[feature_cols]  = scaler.transform(test_df[feature_cols])
+    joblib.dump(scaler, "models/scaler.joblib")
 
     train_dataset = PHM08RULDataset(training_df, seq_len=seq_len, unit_ids=train_units)
     val_dataset   = PHM08RULDataset(val_df, seq_len=seq_len, unit_ids=val_units)

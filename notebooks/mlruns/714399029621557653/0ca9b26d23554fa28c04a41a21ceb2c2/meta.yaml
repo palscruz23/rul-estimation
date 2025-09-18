@@ -1,0 +1,14 @@
+artifact_uri: file:///home/sagemaker-user/rul-estimation/notebooks/mlruns/714399029621557653/0ca9b26d23554fa28c04a41a21ceb2c2/artifacts
+end_time: 1758116870591
+entry_point_name: ''
+experiment_id: '714399029621557653'
+lifecycle_stage: active
+run_id: 0ca9b26d23554fa28c04a41a21ceb2c2
+run_name: bold-dove-328
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758116855755
+status: 3
+tags: []
+user_id: '61422'

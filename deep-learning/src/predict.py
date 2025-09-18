@@ -23,13 +23,14 @@ model = joblib.load(MODEL_PATH)
 seq_len = model.seq_len
 batch_size = model.batch_size
 device = model.device
+print(f"Model loaded: {model}, seq_len: {seq_len}, batch_size: {batch_size}, device: {device}")
 
 train_df = data_process()
 test_df, test_units = data_split(train_df, seq_len, batch_size, test_size=0.1, random_state=42, test=1)
 
-test_dataset  = PHM08RULDataset(test_df, seq_len=seq_len, unit_ids=test_units)
+test_dataset  = PHM08RULDataset(test_df, seq_len=seq_len, unit_ids=[216])
 test_loader  = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
-
+print(test_units)
 model.eval()
 preds = []
 true_rul = []
@@ -40,7 +41,6 @@ criterion = nn.MSELoss()
 with torch.no_grad():
     for x_test, y_test in test_loader:
         x_test, y_test = x_test.to(device), y_test.to(device)
-        print(x_test)
         output = model(x_test)
         preds.extend(output.cpu().numpy().ravel())
         true_rul.extend(y_test.cpu().numpy().ravel())
