@@ -13,6 +13,12 @@ torchinfo
 tqdm>=4.65
 matplotlib>=3.7
 seaborn>=0.12
+evidently>=0.2.4
+fastapi
+uvicorn
+pydantic
+joblib
+python-multipart
 
 # Jupyter environment
 jupyterlab>=4.0

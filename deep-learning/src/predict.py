@@ -18,7 +18,7 @@ import joblib
 from torch.utils.data import DataLoader
 
 # Load parameters
-MODEL_PATH = "src/models/model.pkl"
+MODEL_PATH = "models/model.pkl"
 model = joblib.load(MODEL_PATH)
 seq_len = model.seq_len
 batch_size = model.batch_size
@@ -40,6 +40,7 @@ criterion = nn.MSELoss()
 with torch.no_grad():
     for x_test, y_test in test_loader:
         x_test, y_test = x_test.to(device), y_test.to(device)
+        print(x_test)
         output = model(x_test)
         preds.extend(output.cpu().numpy().ravel())
         true_rul.extend(y_test.cpu().numpy().ravel())

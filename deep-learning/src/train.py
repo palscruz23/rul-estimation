@@ -17,7 +17,7 @@ from models.informer import InformerRUL, InformerEncoder
 
 # Setup ML flow
 print("Setting up MLFlow...\n")
-mlflow.set_tracking_uri("file:./mlruns")
+mlflow.set_tracking_uri("file:./src/mlruns")
 mlflow.set_experiment("predictive-rul-deep-learning")
 
 print("Loading data...\n")

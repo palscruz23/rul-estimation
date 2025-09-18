@@ -19,8 +19,8 @@ def load_phm08(path, filename):
     return df
 
 def data_process():
-    train_df = load_phm08("../data/Challenge_Data/", "train.txt")
-    test_df = load_phm08("../data/Challenge_Data/", "test.txt")
+    train_df = load_phm08("src/data/Challenge_Data/", "train.txt")
+    test_df = load_phm08("src/data/Challenge_Data/", "test.txt")
 
     # Extract RUL for training set
     rul_per_unit = train_df.groupby(0)[1].max().reset_index()

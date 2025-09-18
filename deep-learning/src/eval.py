@@ -112,8 +112,8 @@ if mlflow_set == 1:
 print("Inference of best model completed...")
 
 # Save model
-joblib.dump(model, "src/models/model.pkl")
-print("Model saved to src/models/model.pkl")
+joblib.dump(model, "model/model.pkl")
+print("Model saved to model/model.pkl")
 
 summary(model, input_size=(batch_size, seq_len, num_features))
 
