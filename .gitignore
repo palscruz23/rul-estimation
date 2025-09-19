@@ -1,4 +1,4 @@
-"notebooks/"
-".ipynb_checkpoints"
-".vscode/"
-".data/"
+notebooks/
+.ipynb_checkpoints
+.vscode/
+.data/
