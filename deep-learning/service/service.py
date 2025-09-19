@@ -13,6 +13,9 @@ from models.informer import InformerRUL, InformerEncoder
 import io
 import torch
 from torch.utils.data import DataLoader, Dataset
+from prometheus_client import Counter, Histogram
+from prometheus_fastapi_instrumentator import Instrumentator
+import time
 
 # Load model
 MODEL_PATH = "models/model.pkl"
@@ -24,16 +27,37 @@ print(f"Model loaded: {model}, seq_len: {seq_len}, batch_size: {batch_size}, dev
 # FastAPI app
 app = FastAPI()
 
+# Metrics
+PREDICTION_COUNTER = Counter(
+    "model_predictions_total", 
+    "Total number of predictions made"
+)
+
+PREDICTION_ERRORS = Counter(
+    "model_prediction_errors_total", 
+    "Total number of prediction errors"
+)
+
+PREDICTION_LATENCY = Histogram(
+    "model_prediction_latency_seconds", 
+    "Prediction latency in seconds"
+)
+
+# Expose /metrics
+@app.on_event("startup")
+async def startup():
+    Instrumentator().instrument(app).expose(app)
+
 # ---------------------------
 # Inference Endpoint
 # ---------------------------
 @app.post("/predict")
-def predict(file: UploadFile = File(...)):
+async def predict(file: UploadFile = File(...)):
 
     """Handle TXT/CSV file upload"""
-
+    start = time.time()
     try:
-        contents =  file.file.read()
+        contents =  await file.read()
         decoded = contents.decode("utf-8")
         print(io.StringIO(decoded))
         # Detect CSV or TXT
@@ -66,8 +90,14 @@ def predict(file: UploadFile = File(...)):
                 output = model(x_pred)
                 preds.extend(output.cpu().numpy().ravel().tolist())
                 true_rul.extend(y_pred.cpu().numpy().ravel().tolist())
+        # metrics
+        duration = time.time() - start
+        PREDICTION_LATENCY.observe(duration)
+        PREDICTION_COUNTER.inc()
+
         return {"predictions": preds, "true_rul": true_rul}
     except Exception as e:
+        PREDICTION_ERRORS.inc()
         raise HTTPException(status_code=500, detail=str(e))
 
 # ---------------------------

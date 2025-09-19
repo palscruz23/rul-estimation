@@ -1,1 +1,4 @@
-# "notebooks/RUL using DL.ipynb"
+"notebooks/"
+".ipynb_checkpoints"
+".vscode/"
+".data/"
