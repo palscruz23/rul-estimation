@@ -18,7 +18,7 @@ Source: [PHM08 Challenge Data Set](https://data.nasa.gov/dataset/phm-2008-challe
 1. Clone the repository:
 
    ```
-   git clone estimate_rul
+   git clone https://github.com/palscruz23/rul-estimation.git
    cd rul-estimation
    ```
 
@@ -28,10 +28,31 @@ Source: [PHM08 Challenge Data Set](https://data.nasa.gov/dataset/phm-2008-challe
    pip install -r requirements.txt
    ```
 
-3. Open streamlit app for the RUL Estimation visualization
+  
+3. Run RUL using machine learning methods
+
+    Change directory to machine-learning folder
     ```
-   streamlit run src/Main.py
-   ```
+    cd machine-learning
+    ```
+    Open streamlit app for the RUL Estimation visualization
+    ```
+    streamlit run src/Main.py
+    ```
+  
+1. Run RUL using deep learning methods (RNN, LSTM, Seq2Seq, Informer models)
+    Change directory to deep-learning folder
+    ```
+    cd deep-learning
+    ```
+    Start the FastAPI server using Uvicorn:
+    ```
+    uvicorn service.service:app --reload --host 127.0.0.1 --port 8000
+    ```
+    Run inference from `service/predict.py` script. 
+    ```
+    python -m service.predict 
+    ```
 
 ## 📚 Projects Overview
 ### <i>Remaining Useful Life Estimation using machine learning techniques</i>
@@ -47,14 +68,10 @@ Source: [PHM08 Challenge Data Set](https://data.nasa.gov/dataset/phm-2008-challe
    - Perform sensor fusion to develop health indicator
    - Develop Residual-similarity model using Degree-2 polynomial fit
    - Plot health indicator of validation engine from 5% to 100% operating life
-- Notebook: 
-   ```
-   notebooks/RUL using ML.ipynb
-   ```
-
+ 
 #### 📉 RUL Estimation using ML Demo
 
- ![RUL Estimation Demo](src/figures/RUL/RUL.gif)
+ ![RUL Estimation Demo](machine-learning/src/figures/RUL/RUL.gif)
 
 #### 📃 References
 [1] [MATLAB Similarity-Based Remaining Useful Life Estimation](https://au.mathworks.com/help/predmaint/ug/similarity-based-remaining-useful-life-estimation.html)
@@ -62,10 +79,11 @@ Source: [PHM08 Challenge Data Set](https://data.nasa.gov/dataset/phm-2008-challe
 [2] [A similarity-based prognostics approach for Remaining Useful Life estimation of engineered systems](https://ieeexplore.ieee.org/document/4711421)
 
 
- ### <i>Remaining Useful Life Estimation using deep learning techniques</i> (soon)
- <!-- - Data Processing
-   - Load training and test data
-   - Split data set into training and validation sets
+ ### <i>Remaining Useful Life Estimation using deep learning techniques</i> 
+ - Data Processing
+   - Load training data
+   - Split data set into training, validation and test sets
+   - Perform scaling using StandardScaler
    - Create PHM08RULDataset dataset class
  - Remaining Useful Life Estimation
    - Initiate ML flow experiment
@@ -75,10 +93,22 @@ Source: [PHM08 Challenge Data Set](https://data.nasa.gov/dataset/phm-2008-challe
    - Select best model
    - Perform bias vs variance analysis
    - Perform Estimation on test data.
-  - Notebook: 
-      ```
-      notebooks/RUL using DL.ipynb
-      ``` -->
+
+#### 📉 RUL Estimation using DL Demo
+
+ ![RUL Estimation Demo](deep-learning/service/lstm.gif)
+
+#### 📃 References
+
+[1] [Recurrent neural networks for remaining useful life estimation](https://ieeexplore.ieee.org/document/4711422)
+
+[2] [Recurrent Neural Network (RNN)](https://medium.com/@RobuRishabh/recurrent-neural-network-rnn-8412b9abd755)
+
+[3] [Understanding LSTMs](https://colah.github.io/posts/2015-08-Understanding-LSTMs/)
+
+[4] [Understanding the Seq2Seq Model](https://medium.com/@infin94/understanding-the-seq2seq-model-what-you-should-know-before-understanding-transformers-e5891bcd57ec)
+
+[5] [Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting](hhttps://arxiv.org/pdf/2012.07436)
 
 ## 📜 License
 
