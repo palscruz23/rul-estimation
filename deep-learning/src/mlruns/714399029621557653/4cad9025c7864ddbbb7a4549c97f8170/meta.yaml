@@ -1,0 +1,15 @@
+artifact_uri: file:///home/sagemaker-user/rul-estimation/notebooks/mlruns/714399029621557653/4cad9025c7864ddbbb7a4549c97f8170/artifacts
+end_time: 1758113019264
+entry_point_name: ''
+experiment_id: '714399029621557653'
+lifecycle_stage: active
+run_id: 4cad9025c7864ddbbb7a4549c97f8170
+run_name: luxuriant-eel-692
+run_uuid: 4cad9025c7864ddbbb7a4549c97f8170
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758113007262
+status: 3
+tags: []
+user_id: sagemaker-user

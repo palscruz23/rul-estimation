@@ -1,0 +1,15 @@
+artifact_uri: file:///home/sagemaker-user/rul-estimation/notebooks/mlruns/714399029621557653/c73eebc29fab4898b73a5ce64928327d/artifacts
+end_time: 1758113067068
+entry_point_name: ''
+experiment_id: '714399029621557653'
+lifecycle_stage: active
+run_id: c73eebc29fab4898b73a5ce64928327d
+run_name: rogue-dove-539
+run_uuid: c73eebc29fab4898b73a5ce64928327d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758113056107
+status: 3
+tags: []
+user_id: sagemaker-user

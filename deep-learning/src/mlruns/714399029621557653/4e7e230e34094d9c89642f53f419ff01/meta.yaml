@@ -1,0 +1,14 @@
+artifact_uri: file:///home/sagemaker-user/rul-estimation/notebooks/mlruns/714399029621557653/4e7e230e34094d9c89642f53f419ff01/artifacts
+end_time: 1758116886379
+entry_point_name: ''
+experiment_id: '714399029621557653'
+lifecycle_stage: active
+run_id: 4e7e230e34094d9c89642f53f419ff01
+run_name: gregarious-dove-55
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758116870813
+status: 3
+tags: []
+user_id: '61422'

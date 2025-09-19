@@ -27,7 +27,6 @@ Source: [PHM08 Challenge Data Set](https://data.nasa.gov/dataset/phm-2008-challe
    ```
    pip install -r requirements.txt
    ```
-
   
 3. Run RUL using machine learning methods
 
@@ -40,7 +39,8 @@ Source: [PHM08 Challenge Data Set](https://data.nasa.gov/dataset/phm-2008-challe
     streamlit run src/Main.py
     ```
   
-1. Run RUL using deep learning methods (RNN, LSTM, Seq2Seq, Informer models)
+4. Run RUL using deep learning methods (RNN, LSTM, Seq2Seq, Informer models)
+   
     Change directory to deep-learning folder
     ```
     cd deep-learning
@@ -52,6 +52,11 @@ Source: [PHM08 Challenge Data Set](https://data.nasa.gov/dataset/phm-2008-challe
     Run inference from `service/predict.py` script. 
     ```
     python -m service.predict 
+    ```
+    (Optional) To check ML flow experiments, run then open `http://127.0.0.1:5000/` in browser.
+    ```
+    cd src
+    mlflow ui --port 5000
     ```
 
 ## 📚 Projects Overview
@@ -78,8 +83,7 @@ Source: [PHM08 Challenge Data Set](https://data.nasa.gov/dataset/phm-2008-challe
 
 [2] [A similarity-based prognostics approach for Remaining Useful Life estimation of engineered systems](https://ieeexplore.ieee.org/document/4711421)
 
-
- ### <i>Remaining Useful Life Estimation using deep learning techniques</i> 
+### <i>Remaining Useful Life Estimation using deep learning techniques</i> 
  - Data Processing
    - Load training data
    - Split data set into training, validation and test sets

@@ -1,0 +1,6 @@
+artifact_location: file:///home/sagemaker-user/rul-estimation/notebooks/mlruns/714399029621557653
+creation_time: 1758112723694
+experiment_id: '714399029621557653'
+last_update_time: 1758112723694
+lifecycle_stage: active
+name: predictive-rul-deep-learning

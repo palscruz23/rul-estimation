@@ -1,0 +1,15 @@
+artifact_uri: file:///home/sagemaker-user/rul-estimation/notebooks/mlruns/714399029621557653/dea5e2bdfbb34d238ebefa86a8f18111/artifacts
+end_time: 1758113651877
+entry_point_name: ''
+experiment_id: '714399029621557653'
+lifecycle_stage: active
+run_id: dea5e2bdfbb34d238ebefa86a8f18111
+run_name: bouncy-calf-843
+run_uuid: dea5e2bdfbb34d238ebefa86a8f18111
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758113630412
+status: 3
+tags: []
+user_id: sagemaker-user

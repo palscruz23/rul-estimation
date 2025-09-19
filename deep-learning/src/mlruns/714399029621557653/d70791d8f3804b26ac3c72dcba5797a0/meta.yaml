@@ -1,0 +1,15 @@
+artifact_uri: file:///home/sagemaker-user/rul-estimation/notebooks/mlruns/714399029621557653/d70791d8f3804b26ac3c72dcba5797a0/artifacts
+end_time: 1758112954389
+entry_point_name: ''
+experiment_id: '714399029621557653'
+lifecycle_stage: active
+run_id: d70791d8f3804b26ac3c72dcba5797a0
+run_name: bright-chimp-763
+run_uuid: d70791d8f3804b26ac3c72dcba5797a0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758112943642
+status: 3
+tags: []
+user_id: sagemaker-user

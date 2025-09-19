@@ -1,0 +1,14 @@
+artifact_uri: file:///home/sagemaker-user/rul-estimation/notebooks/mlruns/714399029621557653/3b9d936f4dbf4d60af22ebbe38a8c917/artifacts
+end_time: 1758116806807
+entry_point_name: ''
+experiment_id: '714399029621557653'
+lifecycle_stage: active
+run_id: 3b9d936f4dbf4d60af22ebbe38a8c917
+run_name: thundering-shrew-296
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758116770716
+status: 3
+tags: []
+user_id: '61422'

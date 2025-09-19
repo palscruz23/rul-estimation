@@ -77,8 +77,9 @@ for model_name in model_names:
                                                     "results": results
                                                 }
 print("Check performance in MLFlow UI...\n")
-print("""Run in terminal `mlflow ui --port 5000`
-"Open `http://127.0.0.1:5000/` in browser.""")
+print("""cd src
+        Run in terminal `mlflow ui --port 5000`
+        "Open `http://127.0.0.1:5000/` in browser.""")
 
 
 
