@@ -108,7 +108,7 @@ Source: [PHM08 Challenge Data Set](https://data.nasa.gov/dataset/phm-2008-challe
 
 [4] [Understanding the Seq2Seq Model](https://medium.com/@infin94/understanding-the-seq2seq-model-what-you-should-know-before-understanding-transformers-e5891bcd57ec)
 
-[5] [Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting](hhttps://arxiv.org/pdf/2012.07436)
+[5] [Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting](https://arxiv.org/pdf/2012.07436)
 
 ## 📜 License
 
