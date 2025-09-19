@@ -13,9 +13,6 @@ from models.informer import InformerRUL, InformerEncoder
 import io
 import torch
 from torch.utils.data import DataLoader, Dataset
-from prometheus_client import Counter, Histogram
-from prometheus_fastapi_instrumentator import Instrumentator
-import time
 
 # Load model
 MODEL_PATH = "models/model.pkl"
@@ -27,37 +24,15 @@ print(f"Model loaded: {model}, seq_len: {seq_len}, batch_size: {batch_size}, dev
 # FastAPI app
 app = FastAPI()
 
-# Metrics
-PREDICTION_COUNTER = Counter(
-    "model_predictions_total", 
-    "Total number of predictions made"
-)
-
-PREDICTION_ERRORS = Counter(
-    "model_prediction_errors_total", 
-    "Total number of prediction errors"
-)
-
-PREDICTION_LATENCY = Histogram(
-    "model_prediction_latency_seconds", 
-    "Prediction latency in seconds"
-)
-
-# Expose /metrics
-@app.on_event("startup")
-async def startup():
-    Instrumentator().instrument(app).expose(app)
-
 # ---------------------------
 # Inference Endpoint
 # ---------------------------
 @app.post("/predict")
-async def predict(file: UploadFile = File(...)):
+def predict(file: UploadFile = File(...)):
 
     """Handle TXT/CSV file upload"""
-    start = time.time()
     try:
-        contents =  await file.read()
+        contents =  file.file.read()
         decoded = contents.decode("utf-8")
         print(io.StringIO(decoded))
         # Detect CSV or TXT
@@ -90,50 +65,8 @@ async def predict(file: UploadFile = File(...)):
                 output = model(x_pred)
                 preds.extend(output.cpu().numpy().ravel().tolist())
                 true_rul.extend(y_pred.cpu().numpy().ravel().tolist())
-        # metrics
-        duration = time.time() - start
-        PREDICTION_LATENCY.observe(duration)
-        PREDICTION_COUNTER.inc()
 
         return {"predictions": preds, "true_rul": true_rul}
     except Exception as e:
-        PREDICTION_ERRORS.inc()
         raise HTTPException(status_code=500, detail=str(e))
 
-# ---------------------------
-# Healthcheck Endpoint
-# ---------------------------
-# @app.get("/healthcheck")
-# def healthcheck():
-#     return {"status": "ok", "model_loaded": model is not None}
-
-# # ---------------------------
-# # Drift Detection (periodic use)
-# # ---------------------------
-# @app.post("/check-drift")
-# def check_drift(new_data: list[SensorData]):
-#     # Convert incoming batch to DataFrame
-#     new_df = pd.DataFrame([d.values for d in new_data])
-    
-#     # Build Evidently drift report
-#     report = Report([
-#         DataDriftPreset(),
-#         # you can add others
-#     ])
-    
-#     my_eval = report.run(reference_data=ref_df, current_data=new_df)
-#     drift_detected_flag = my_eval.as_dict()["metrics"][0]["result"]["dataset_drift"]
-    
-#     return {
-#         "drift": bool(drift_detected_flag),
-#         "details": my_eval.as_dict()["metrics"][0]["result"]
-#     }
-
-# # ---------------------------
-# # Retrain Trigger (placeholder)
-# # ---------------------------
-# @app.post("/retrain")
-# def retrain():
-#     return {"status": "triggered", "message": "Retraining pipeline started."}
-
-    
